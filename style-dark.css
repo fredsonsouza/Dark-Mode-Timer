@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #fff;
+  --bg-color-dark: #121214;
+  --text-color: #323238;
+  font-size: 62.5%;
+}
+
+.dark-theme {
+  --bg-color: #000;
+  --text-color: #ffffff;
+  --bg-card-color: #29292e;
+  --bg-click-card-color: #0a3442;
+  --bg-fill-click: white;
+  --color-fill: #c4c4cc;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  display: grid;
+  min-height: 75vh;
+}
+
+nav {
+  position: fixed;
+  top: 6.4rem;
+  right: 6.4rem;
+}
+
+main {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+.color {
+  fill: var(--bg-fill-click);
+}
+.hide {
+  display: none;
+}
+
+.time {
+  display: flex;
+  font-size: clamp(13.6rem, 5rem + 10vw, 3rem);
+  margin-bottom: 1.7rem;
+}
+.controls button svg {
+  width: clamp(4.4rem, 6rem + 10vw, 3rem);
+}
+#menu button svg {
+  width: clamp(3.2rem, 20rem + 15vw, 15rem);
+}
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+#menu {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+input[type="range"] {
+  appearance: none;
+  height: 0.4rem;
+  background: #323238;
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #323238;
+}
+
+.inputActive input[type="range"] {
+  appearance: none;
+  height: 0.4rem;
+  background: #fff;
+}
+.inputActive input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.range-tree {
+  position: absolute;
+  left: 3rem;
+  top: 12rem;
+  width: 9rem;
+}
+.range-rain {
+  position: absolute;
+  right: 3rem;
+  top: 12rem;
+  width: 9rem;
+}
+.range-coffee {
+  position: absolute;
+  left: 3rem;
+  top: 31rem;
+  width: 9rem;
+}
+.range-fireplace {
+  position: absolute;
+  right: 3rem;
+  top: 31rem;
+  width: 9rem;
+}
